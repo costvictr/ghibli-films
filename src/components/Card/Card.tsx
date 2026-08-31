@@ -5,12 +5,14 @@ type CardProps = Omit<Film, "id">;
 
 const Card = ({ image, title, description, director }: CardProps) => {
   return (
-    <div className="container">
-      <img src={image} alt={title} />
-      <h2>{title}</h2>
-      <p className="description">{description}</p>
-      <p className="director">Diretor: {director}</p>
-    </div>
+    <article className="container">
+      <img src={image} alt={title} loading="lazy" />
+      <div className="content">
+        <h2>{title}</h2>
+        <p className="director">Director: {director}</p>
+        <p className="description">{description}</p>
+      </div>
+    </article>
   );
 };
 

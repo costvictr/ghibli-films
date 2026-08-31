@@ -1,6 +1,6 @@
 const BASE_URL = "https://ghibliapi.vercel.app";
 
-interface Film {
+export interface Film {
   id: string;
   title: string;
   image: string;
