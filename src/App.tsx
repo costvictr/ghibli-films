@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getFilms, type Film } from "./services/ghibli";
 
-import Grid from "./components/Grid";
 import Card from "./components/Card";
 import "./App.css";
 
@@ -28,11 +27,11 @@ function App() {
           onChange={(e) => setFilteredDirector(e.target.value)}
         />
       </header>
-      <Grid>
+      <div className="grid">
         {filteredFilms.map((film) => (
           <Card key={film.id} {...film} />
         ))}
-      </Grid>
+      </div>
     </>
   );
 }
